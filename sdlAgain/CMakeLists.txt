@@ -37,4 +37,4 @@ target_include_directories(iota_system PUBLIC ${SDL3_INCLUDE_DIRS})
 
 target_compile_definitions(iota_system PRIVATE SDL_MAIN_USE_CALLBACKS)
 
-target_link_libraries(iota_system PRIVATE SDL3::SDL3
+target_link_libraries(iota_system PRIVATE SDL3::SDL3)
