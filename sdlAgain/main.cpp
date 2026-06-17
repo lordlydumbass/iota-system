@@ -655,6 +655,8 @@ int main(int argc, char* argv[])
 			charRenderBuffer[i] = charBuffer[i];
 		}
 
+        SDL_RenderClear(renderer);
+
 		initScreen(renderer);
 
 		for (int i = 0; i < 25; i++) {
