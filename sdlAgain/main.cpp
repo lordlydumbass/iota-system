@@ -314,6 +314,8 @@ int main(int argc, char* argv[])
 		charBuffer[i] = 32;
 	}
 
+
+
 	SDL_Event event;
 	int quit = 0;
 	while (!quit) {
@@ -325,144 +327,326 @@ int main(int argc, char* argv[])
 				break;
 			case SDL_EVENT_KEY_DOWN:
 				switch (event.key.key) {
-				case SDLK_A:
-					tempChar = 'a';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_B:
-					tempChar = 'b';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_C:
-					tempChar = 'c';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_D:
-					tempChar = 'd';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_E:
-					tempChar = 'e';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_F:
-					tempChar = 'f';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_G:
-					tempChar = 'g';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_H:
-					tempChar = 'h';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_I:
-					tempChar = 'i';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_J:
-					tempChar = 'j';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_K:
-					tempChar = 'k';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_L:
-					tempChar = 'l';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_M:
-					tempChar = 'm';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_N:
-					tempChar = 'n';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_O:
-					tempChar = 'o';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_P:
-					tempChar = 'p';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_Q:
-					tempChar = 'q';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_R:
-					tempChar = 'r';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_S:
-					tempChar = 's';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_T:
-					tempChar = 't';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_U:
-					tempChar = 'u';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_V:
-					tempChar = 'v';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_W:
-					tempChar = 'w';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_X:
-					tempChar = 'x';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_Y:
-					tempChar = 'y';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case SDLK_Z:
-					tempChar = 'z';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
-				case (SDLK_A && (SDLK_LSHIFT || SDLK_RSHIFT)):
-					tempChar = 'A';
-					charBuffer[charIndex] = tempChar;
-					charIndex++;
-					break;
+                case SDLK_A:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'A';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'a';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_B:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'B';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'b';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_C:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'C';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'c';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_D:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'D';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'd';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_E:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'E';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'e';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_F:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'F';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'f';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_G:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'G';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'g';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_H:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'H';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'h';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_I:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'I';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'i';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_J:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'J';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'j';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_K:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'K';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'k';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_L:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'L';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'l';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_M:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'M';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'm';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_N:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'N';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'n';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_O:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'O';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'o';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_P:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'P';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'p';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_Q:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'Q';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'q';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_R:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'R';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'r';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_S:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'S';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 's';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_T:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'T';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 't';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_U:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'U';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'u';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_V:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'V';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'v';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_W:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'W';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'w';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_X:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'X';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'x';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_Y:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'Y';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'y';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
+                case SDLK_Z:
+                    if (event.key.mod & SDL_KMOD_SHIFT) {
+                        tempChar = 'Z';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    else {
+                        tempChar = 'z';
+                        charBuffer[charIndex] = tempChar;
+                        charIndex++;
+                    }
+                    break;
 				}
+                
 			}
 		}
+        if (charIndex > 1024) {
+            charIndex = 0;
+        }
+
 		charRenderIndex = 0;
 		for (int i = 0; i < 1024; i++) {
 			charRenderBuffer[i] = charBuffer[i];

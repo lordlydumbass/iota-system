@@ -40,5 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="temp.txt" />
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
 </Project>
