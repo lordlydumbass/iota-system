@@ -8,7 +8,7 @@ include(FetchContent)
 
 function(include_dependency libName gitURL gitTag)
 	FetchContent_Declare(${libName}
-	GIT_REPOSITORY ${gitUrl}
+	GIT_REPOSITORY ${gitURL}
 	GIT_TAG        ${gitTag}
 	GIT_SHALLOW    TRUE
 	GIT_PROGRESS   TRUE
