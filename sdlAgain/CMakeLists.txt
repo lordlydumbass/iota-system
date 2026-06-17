@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
 project(iota_system)
 
-set(CMAKE_C_STANDARD 23)
+set(CMAKE_CXX_STANDARD 23)
 
 include(FetchContent)
 
@@ -34,7 +34,5 @@ endif()
 add_executable(iota_system ${SOURCES})
 
 target_include_directories(iota_system PUBLIC ${SDL3_INCLUDE_DIRS})
-
-target_compile_definitions(iota_system PRIVATE SDL_MAIN_USE_CALLBACKS)
 
 target_link_libraries(iota_system PRIVATE SDL3::SDL3)
