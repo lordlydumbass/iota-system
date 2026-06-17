@@ -1,3 +1,5 @@
+#define SDL_MAIN_HANDLED
+
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include <SDL3/SDL_surface.h>
@@ -265,6 +267,7 @@ void keyPressed(SDL_Renderer* renderer, char key) {
 
 int main(int argc, char* argv[])
 {
+    SDL_SetMainReady();
 	srand(time(NULL));
 
 	SDL_Window* window = NULL;
