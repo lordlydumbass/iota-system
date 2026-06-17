@@ -131,9 +131,6 @@
     <ClCompile Include="tiles.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Documents\iota system\tileset.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="text.h" />
     <ClInclude Include="tiles.h" />
   </ItemGroup>

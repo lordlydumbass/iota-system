@@ -296,16 +296,6 @@ int main(int argc, char* argv[])
 
 	SDL_Log("SDL3 initialized");
 
-	SDL_Surface* screenSurface = SDL_GetWindowSurface(window);
-
-	SDL_asprintf(&bmpPath, "%s/res/img/tileset.bmp", SDL_GetBasePath());
-
-	SDL_Surface* imageSurface = SDL_LoadBMP(bmpPath);
-	if (!imageSurface) {
-		SDL_Log("Image failed to load: %s", SDL_GetError());
-		return -4;
-	}
-
 	SDL_SetRenderScale(renderer, 3, 3);
 
 	createStarArray();
@@ -670,8 +660,6 @@ int main(int argc, char* argv[])
 		SDL_RenderPresent(renderer);
 
 	}
-
-	SDL_DestroySurface(imageSurface);
 	SDL_Log("SDL3 shutdown");
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
