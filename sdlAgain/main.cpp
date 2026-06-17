@@ -93,7 +93,7 @@ void drawBGTile(SDL_Renderer* renderer, int(&tile)[8][8], float xPos, float yPos
 
 void createStarArray() {
 	for (int i = 0; i < 152; i++) {
-		random = rand() % (9 - 1 + 1) + 1;
+		random = SDL_rand(10);
 		switch (random) {
 		case 1:
 			for (int j = 0; j < 8; j++) {
