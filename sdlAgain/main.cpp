@@ -651,8 +651,233 @@ int main(int argc, char* argv[])
                         charIndex++;
                     }
                     break;
+                case SDLK_SPACE:
+                    tempChar = ' ';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                    break;
+
+                case SDLK_BACKSPACE:
+                    charIndex--;
+                    tempChar = ' ';
+                    charBuffer[charIndex] = tempChar;
+                    if (charIndex < 0) {
+                        charIndex = 0;
+                    }
 				}
-                
+
+                //use keycodes instead of key down events for symbols and numbers
+                SDL_Keycode keycode = SDL_GetKeyFromScancode(event.key.scancode, event.key.mod, false);
+                if (keycode == '0') {
+                    tempChar = '0';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '1') {
+                    tempChar = '1';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '2') {
+                    tempChar = '2';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '3') {
+                    tempChar = '3';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '4') {
+                    tempChar = '4';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '5') {
+                    tempChar = '5';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '6') {
+                    tempChar = '6';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '7') {
+                    tempChar = '7';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '8') {
+                    tempChar = '8';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '9') {
+                    tempChar = '9';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '!') {
+                    tempChar = '!';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '"') {
+                    tempChar = '"';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '#') {
+                    tempChar = '#';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '$') {
+                    tempChar = '$';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '%') {
+                    tempChar = '%';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '&') {
+                    tempChar = '&';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '\'') {
+                    tempChar = '\'';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '(') {
+                    tempChar = '(';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == ')') {
+                    tempChar = ')';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '*') {
+                    tempChar = '*';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '+') {
+                    tempChar = '+';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == ',') {
+                    tempChar = ',';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '-') {
+                    tempChar = '-';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '.') {
+                    tempChar = '.';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '/') {
+                    tempChar = '/';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == ':') {
+                    tempChar = ':';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == ';') {
+                    tempChar = ';';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '<') {
+                    tempChar = '<';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '=') {
+                    tempChar = '=';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '>') {
+                    tempChar = '>';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '?') {
+                    tempChar = '?';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '@') {
+                    tempChar = '@';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '[') {
+                    tempChar = '[';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '\\') {
+                    tempChar = '\\';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == ']') {
+                    tempChar = ']';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '^') {
+                    tempChar = '^';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '_') {
+                    tempChar = '_';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '`') {
+                    tempChar = '`';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '{') {
+                    tempChar = '{';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '|') {
+                    tempChar = '|';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '}') {
+                    tempChar = '}';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
+                if (keycode == '~') {
+                    tempChar = '~';
+                    charBuffer[charIndex] = tempChar;
+                    charIndex++;
+                }
 			}
 		}
         if (charIndex > 1024) {
