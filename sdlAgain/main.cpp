@@ -57,7 +57,7 @@ int charValue = 0;
 char testString[] = "hello world";
 
 int xPos = 0;
-int yPos = 8;
+int yPos = 10;
 
 char tempChar = ' ';
 
@@ -69,10 +69,18 @@ char charRenderBuffer[1024] = {};
 int charIndex = 0;
 int charRenderIndex = 0;
 
-int textYPos = 8;
+int textYPos = 12;
 
 int drawingXPos = 0;
 int drawingYPos = 0;
+
+int strY = 0;
+
+char introString1[] = "Iota System - fantasy computer\nsimulator\nCopyright 2026 halberd/lordlydumbass";
+
+char currentDir[] = "IOTA/>";
+
+int dirLen = 0;
 
 int getCharValue(char ch) {
 	charValue = (int)ch;
@@ -269,19 +277,31 @@ void initScreen(SDL_Renderer* renderer) {
 }
 
 
-void drawTestString(SDL_Renderer* renderer) {
-	for (int i = 0; testString[i] != '\0'; i++) {
-		int charValue = getCharValue(testString[i]);
+void drawIntroStrings(SDL_Renderer* renderer) {
+    xPos = 0;
+    strY = 0;
+
+	for (int i = 0; introString1[i] != '\0'; i++) {
+        if (introString1[i] == '\n') {
+            strY++;
+            xPos = 0;
+            continue;
+        }
+		int charValue = getCharValue(introString1[i]);
 		getTileFromASCII(charValue);
-		drawBGTile(renderer, tempTile, i, 8);
+		drawBGTile(renderer, tempTile, xPos, (8 + strY));
+        xPos++;
 	}
 }
 
-void keyPressed(SDL_Renderer* renderer, char key) {
-	int charValue = getCharValue(key);
-	getTileFromASCII(charValue);
-	drawBGTile(renderer, tempTile, xPos, yPos);
-	xPos++;
+void writeDir(SDL_Renderer* renderer) {
+    xPos = 0;
+    for (int i = 0; currentDir[i] != '\0'; i++){
+        int charValue = getCharValue(currentDir[i]);
+        getTileFromASCII(charValue);
+        drawBGTile(renderer, tempTile, xPos, textYPos);
+        xPos++;
+    }
 }
 
 int main(int argc, char* argv[])
@@ -880,6 +900,9 @@ int main(int argc, char* argv[])
                 }
 			}
 		}
+        
+        dirLen = strlen(currentDir);
+
         if (charIndex > 1024) {
             charIndex = 0;
         }
@@ -892,11 +915,15 @@ int main(int argc, char* argv[])
         SDL_RenderClear(renderer);
 
 		initScreen(renderer);
+        
+        drawIntroStrings(renderer);
+
+        writeDir(renderer);
 
 		for (int i = 0; i < 25; i++) {
-			for (int j = 0; j < 38; j++) {
+			for (int j = 0; j < 38 - dirLen; j++) {
 				getTileFromASCII(charRenderBuffer[charRenderIndex]);
-				drawBGTile(renderer, tempTile, j, (i + textYPos));
+				drawBGTile(renderer, tempTile, (j + dirLen), (i + textYPos));
 				charRenderIndex++;
 			}
 		}
