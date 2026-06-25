@@ -25,7 +25,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 void printString(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
-        //int charValue = getCharValue()
+        //int charValue = getCharValue(str[i]);
     }
 }
 

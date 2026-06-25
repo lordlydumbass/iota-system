@@ -19,6 +19,10 @@ endFunction()
 
 set(SOURCES 
 	main.cpp
+	boot.cpp
+	cli.cpp
+	global.cpp
+	input.cpp
 	text.cpp
 	tiles.cpp
 )
