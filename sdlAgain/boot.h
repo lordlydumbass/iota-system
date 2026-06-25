@@ -17,24 +17,18 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
-#include <SDL3/SDL.h>
+#pragma once
 
-#include "boot.h"
-#include "global.h"
-#include "text.h"
+extern int randomStarInt;
+extern int starArray[152][8][8];
+extern int rowNum;
+extern int column;
+extern int xPos;
+extern int strY;
 
-void printString(char *str) {
-    for (int i = 0; str[i] != '\0'; i++) {
-        //int charValue = getCharValue()
-    }
-}
+extern char introString1[78];
 
-void writeDir(SDL_Renderer* renderer) {
-    xPos = 0;
-    for (int i = 0; currentDir[i] != '\0'; i++){
-        int charValue = getCharValue(currentDir[i]);
-        getTileFromASCII(charValue);
-        drawBGTile(renderer, tempTile, xPos, textYPos);
-        xPos++;
-    }
-}
+extern void createStarArray();
+extern void drawStars(SDL_Renderer* renderer);
+extern void initScreen(SDL_Renderer* renderer);
+extern void drawIntroStrings(SDL_Renderer* renderer);

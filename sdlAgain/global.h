@@ -17,24 +17,15 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
+#pragma once
+
 #include <SDL3/SDL.h>
 
-#include "boot.h"
-#include "global.h"
-#include "text.h"
+extern int xIndex;
+extern int yIndex;
+extern int charValue;
+extern char currentDir[1024];
+extern int textYPos;
 
-void printString(char *str) {
-    for (int i = 0; str[i] != '\0'; i++) {
-        //int charValue = getCharValue()
-    }
-}
-
-void writeDir(SDL_Renderer* renderer) {
-    xPos = 0;
-    for (int i = 0; currentDir[i] != '\0'; i++){
-        int charValue = getCharValue(currentDir[i]);
-        getTileFromASCII(charValue);
-        drawBGTile(renderer, tempTile, xPos, textYPos);
-        xPos++;
-    }
-}
+extern void drawBGTile(SDL_Renderer* renderer, int(&tile)[8][8], float xPos, float yPos);
+extern int getCharValue(char ch);
